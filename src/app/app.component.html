@@ -1,0 +1,10 @@
+<div>
+	<h2>Hello Miras</h2>
+	<h2>Select Category</h2>
+	<div>
+		<input type="checkbox" name="all" [checked]="isAllChecked()" (change)="checkAll($event)"/> Select All
+  </div>
+  <div *ngFor="let category of categoryList">
+    <input type="checkbox" name="category[]" [(ngModel)]="category.selected"/> {{category.name}}
+  </div>
+</div>
